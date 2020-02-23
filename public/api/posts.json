@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "type": "post",
+      "id": "1",
+      "title": "What is this website for?",
+      "date": "today",
+      "content": "This website will be my process from the beginning - inception - to the finale piece that will be the completed personal portfolio.<br><br>The goal of all of this is to document not only the build process, but the reasoning behind my choices.<br><br>Each of these posts will be linked to a specific github commit which you can follow along. If you choose to install/fork/follow along, if you follow all the steps to install and get this running, then you can just point the head at a specific commit and load it up in your browser and see where we are.<br><br><br>Again, who is this website for, its for everyone."
+    },
+    {
+      "type": "post",
+      "id": "2",
+      "title": "How will this project comprise of?",
+      "date": "today",
+      "content": "This project comprises of 2 things, a <strong>Frontend</strong> and a <strong>Backend</strong>.<br><br><The FRONTEND will be built out in Ember JS, or what some like to call<br> <blockquote>A framework for ambitious web developers</blockquote><br><br><br>The BACKEND will be a api that holds all this data. Im still debating how im going to approach this still. Not sure if im going to use an existing Headless CMS or build it from scratch. I'll come back to this later on. "
+    },
+    {
+      "type": "post",
+      "id": "3",
+      "title": "Let's start our journey.",
+      "date": "today",
+      "content": "We start our journey by installing the very framework we are going to be building all of this in ... EMBER.<br><br><br>Before we begin, there needs to be a bit of backstory as to why im choosing Ember to build all this out rather than any other framework like React, Vue, Laravel, etc.<br><br><br>Shor answer is, because I wanted to learn Ember. Long answer is that most of these frameworks all behave in similar fashion.<br><br><br>They all follow similar principles and patterns.<br><ul><li>Components</li><li>Routes</li><li>Data/Model Layers</li><li>Some sort of templating</li><li>...</li></ul><br><br><br>I cant really break down which is better and which isnt, as they all have there pros and cons, and choosing one over the other doesnt make you the better developer or a bad one, smart or dump, junior or senior. These are just tools. They all essentially do the same things, just in a different flavor.<br><br><br>As I said, this will also be a breakdown into my thought process, as to what questions I will ask myself, and the anwers and choices to follow.<br><br><br>With that out of the way, lets begin our journey."
+    },
+    {
+      "type": "post",
+      "id": "4",
+      "title": "Round 1 - SETUP!!!",
+      "date": "today",
+      "content": "Our first step in all of this is actually get everything up and running."
+    }
+  ]
+}

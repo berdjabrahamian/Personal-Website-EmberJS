@@ -1,0 +1,13 @@
+button {
+  padding: 10px 15px;
+  background-color: white;
+  border: thin solid #C8C8C8;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: #C8C8C8;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+  }
+}

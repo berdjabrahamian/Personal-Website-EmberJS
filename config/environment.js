@@ -47,5 +47,8 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.GITHUB = 'https://github.com';
+  ENV.EMAIL = 'my.email@example.com';
+
   return ENV;
 };

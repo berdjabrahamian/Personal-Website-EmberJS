@@ -1,0 +1,48 @@
+$header-height: 100px;
+$footer-height: 100px;
+
+
+main {
+  align-items: center;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+
+
+// SETTING UP SOME BOILERPLATE STYLING THAT I MAY USE ONE DAY
+
+.no {
+  &-padding {
+    padding: 0;
+
+    &-v {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &-h {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+  &-margin {
+    margin: 0;
+
+    &-v {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &-h {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
