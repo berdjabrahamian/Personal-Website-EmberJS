@@ -50,5 +50,10 @@ module.exports = function(environment) {
   ENV.GITHUB = 'https://github.com';
   ENV.EMAIL = 'my.email@example.com';
 
+  ENV['ember-cli-mirage'] = {
+    enabled: true,
+    autostart: true
+  };
+
   return ENV;
 };

@@ -1,0 +1,19 @@
+<h1>All Posts Page</h1>
+
+<section>
+  {{#each @model as |post|}}
+    <article>
+      <img src={{post.featuredImage}} alt={{post.title}}>
+      <h2>{{post.id}}</h2>
+      <h2>{{post.publish}}</h2>
+      <h1>{{post.title}}</h1>
+      <h3>{{post.slug}}</h3>
+      <h3>{{post.author}}</h3>
+      <h5>{{post.createdAt}}</h5>
+      <h5>{{post.updatedAt}}</h5>
+      <h6>{{post.publishedAt}}</h6>
+      <p>{{post.body}}</p>
+    </article>
+    <hr/>
+  {{/each}}
+</section>
