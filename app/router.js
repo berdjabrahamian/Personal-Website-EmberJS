@@ -11,4 +11,7 @@ Router.map(function() {
   this.route('posts', function() {
     this.route('index', {path: '/'});
   });
+  this.route('lesson', function() {
+    this.route('index', {path: '/'});
+  });
 });

@@ -16,4 +16,13 @@ blockquote {
       text-decoration: none;
     }
   }
+
+  code {
+    display: block;
+    &::before {
+      content: "$";
+      font-weight:bold;
+      padding-right:15px;
+    }
+  }
 }

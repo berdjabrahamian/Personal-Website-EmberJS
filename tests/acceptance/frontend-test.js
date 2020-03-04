@@ -22,4 +22,10 @@ module('Acceptance | frontend', function (hooks) {
 
     assert.equal(currentURL(), '/posts');
   });
+
+  test('visiting LESSONS PAGE - /lessons', async function(assert) {
+    await visit('/lessons');
+
+    assert.equal(currentURL(), '/lessons');
+  });
 });

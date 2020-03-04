@@ -1,0 +1,42 @@
+section {
+  &.postBlock {
+    display: flex;
+    align-items: flex-start;
+    justify-items: flex-start;
+
+    article {
+      padding-left: 20px;
+    }
+
+    aside {
+      flex-basis: 150px;
+      justify-self: center;
+      display: inline-flex;
+
+      p {
+        margin: 0;
+        padding-top: 10px;
+        flex-basis: 100%;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+
+
+        span {
+          &.day {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 15px;
+          }
+
+          &.month,
+          &.year {
+            font-size:1.2rem;
+          }
+        }
+      }
+
+    }
+
+  }
+}
