@@ -1,0 +1,21 @@
+<section class="postBlock">
+  <aside class="postedDate">
+    <p><span class="day">{{get @model.postedDate "0"}}</span>
+    <span class="month">{{get @model.postedDate "1"}}</span> <span class="year">{{get @model.postedDate "2"}}</span>
+    </p>
+
+  </aside>
+  <article>
+    <img src={{@model.featuredImage}} alt={{@model.title}}>
+    <h2>{{@model.id}}</h2>
+    <h2>{{@model.publish}}</h2>
+    <h1>{{@model.title}}</h1>
+    <h3>{{@model.slug}}</h3>
+    <h3>{{@model.author}}</h3>
+    <h5>{{@model.createdAt}}</h5>
+    <h5>{{@model.updatedAt}}</h5>
+    <h6>{{@model.publishedAt}}</h6>
+    <p>{{@model.body}}</p>
+  </article>
+  {{yield}}
+</section>
