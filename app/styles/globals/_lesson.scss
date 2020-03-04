@@ -1,0 +1,16 @@
+main {
+  &.lesson {
+    aside {
+      flex:0 0 300px;
+      position: sticky;
+      top:0px;
+      align-self: flex-start;
+    }
+
+    article {
+      padding-left:50px;
+      flex:1 0;
+      border-left:thin solid black;
+    }
+  }
+}

@@ -23,9 +23,9 @@ module('Acceptance | frontend', function (hooks) {
     assert.equal(currentURL(), '/posts');
   });
 
-  test('visiting LESSONS PAGE - /lessons', async function(assert) {
-    await visit('/lessons');
+  test('visiting LESSONS PAGE - /lesson', async function(assert) {
+    await visit('/lesson');
 
-    assert.equal(currentURL(), '/lessons');
+    assert.equal(currentURL(), '/lesson');
   });
 });
