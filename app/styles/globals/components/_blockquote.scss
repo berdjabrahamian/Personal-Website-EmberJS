@@ -19,10 +19,13 @@ blockquote {
 
   code {
     display: block;
-    &::before {
-      content: "$";
-      font-weight:bold;
-      padding-right:15px;
+
+    &.terminal {
+      &::before {
+        content: "$";
+        font-weight: bold;
+        padding-right: 15px;
+      }
     }
   }
 }

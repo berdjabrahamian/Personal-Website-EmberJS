@@ -10,5 +10,7 @@ The main page to view all the lessons is [here](https://ba-personal.firebaseapp.
 - [Introduction](https://ba-personal.firebaseapp.com/lesson)
 - [How will this project come together](https://ba-personal.firebaseapp.com/lesson#story-1)
 - [Lesson 1](https://ba-personal.firebaseapp.com/lesson#1)
+- [Lesson 2](https://ba-personal.firebaseapp.com/lesson#2)
+- [Lesson 3](https://ba-personal.firebaseapp.com/lesson#3)
 
 

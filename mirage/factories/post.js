@@ -24,7 +24,7 @@ export default Factory.extend({
   },
 
   featuredImage() {
-    return faker.image.imageUrl();
+    return faker.image.dataUri(500,500);
   },
 
   createdAt() {

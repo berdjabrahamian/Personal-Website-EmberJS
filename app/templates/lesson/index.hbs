@@ -1,7 +1,6 @@
 <hgroup>
   <h1>Building my personal portfolio with Ember.js</h1>
   <h5>By: Berdj Abrahamian</h5>
-  <h6>Today</h6>
 </hgroup>
 
 <artice>
@@ -14,9 +13,11 @@
     <p>This project will be built on Ember Octane (v3.16). If you have gotten this far, it means that not only has this
       project succeeded in everything that I had imagined in my own mind, but also that you were able to find it by one
       search query or another.</p>
-    <p>This page is supposed to be the <a href="/">Live Demo</a>, where you are allowed to play around. Everything you see
+    <p>This page is supposed to be the <a href="/">Live Demo</a>, where you are allowed to play around. Everything you
+      see
       on this site will be documented in one form or another on this site.</p>
-    <p>You can clone the repository that is connected to this app from GitHub and launch it on your desktop anytime, which
+    <p>You can clone the repository that is connected to this app from GitHub and launch it on your desktop anytime,
+      which
       can be found here:<br>
       <a href="https://github.com/berdjabrahamian/Personal-Website-EmberJS">Personal Portfolio Repo</a></p>
     <p>If you have any question, comments, suggestion or feedback, please feel free to contact me:<br>
@@ -35,6 +36,8 @@
     <h4><a href="#story-1">Story: How will this project come together</a></h4>
     <h4><a href="#1">Lesson 1: Getting Set up and Started</a></h4>
     <h4><a href="#2">Lesson 2: Lets get the project started</a></h4>
+    <h4><a href="#3">Lesson 3: Cool welcome page, now what</a></h4>
+    <h4><a href="#4">Lesson 4: Website Symantics</a></h4>
   </section>
 </aside>
 
@@ -43,10 +46,13 @@
 
   <section id="story-1">
     <h2>How will this project come together</h2>
-    <p>As I said above, this project will be a learning experience for me and hopefully for you as well. We will be going
-      through several <i>LESSONS</i> which will break down everything we are doing. But there is a beauty to all of this.
+    <p>As I said above, this project will be a learning experience for me and hopefully for you as well. We will be
+      going
+      through several <i>LESSONS</i> which will break down everything we are doing. But there is a beauty to all of
+      this.
       You You can also use these <i>lessons</i> and follow along to build out this as well yourself. We will be
-      documenting everything here, so there wont be any guessing or thinking on your end as what you need to fill in.</p>
+      documenting everything here, so there wont be any guessing or thinking on your end as what you need to fill in.
+    </p>
     <p>However, you are free to change things around as you follow along if you are following along this to build
       something else other than a personal portfolio.</p>
   </section>
@@ -55,13 +61,13 @@
     <h2>1: Getting Set up and Started</h2>
     <p>To begin we will need to first set up our directory structure. So lets open up our terminal and get started</p>
     <blockquote>
-      <code>mkdir Portfolio</code>
+      <code class="terminal">mkdir Portfolio</code>
     </blockquote>
     <p>Depending on your OS, the terminal will default to a specific location on open - on a mac, its the users home
       folder. </p>
     <p>Now that we have the new folder created lets <var>cd</var> (change directory) into our newly created folder.</p>
     <blockquote>
-      <code>cd Portfolio</code>
+      <code class="terminal">cd Portfolio</code>
     </blockquote>
     <p>We are in our Portfolio folder, and we are ready to start building</p>
     <hr/>
@@ -69,11 +75,11 @@
     <p>First lets check to see if you have <var>ember cli</var> installed on your system. You can easily check by typing
       the following in your terminal:</p>
     <blockquote>
-      <code>ember --version</code>
+      <code class="terminal">ember --version</code>
     </blockquote>
 
     <blockquote>
-      <code>
+      <code class="terminal">
         ember-cli: 3.16.0<br/>
         node: 12.14.0<br/>
         os: darwin x64
@@ -92,49 +98,171 @@
     <h2>2: Lets get the project started</h2>
     <p>Your terminal should still be reading within the <var>Portfolio</var> folder you created in the first lesson.</p>
     <p>To get the Ember project started and going, you just need to type the following in the terminal:</p>
-    <blockquote><code>ember new frontend</code></blockquote>
+    <blockquote><code class="terminal">ember new frontend</code></blockquote>
     <p>This will create a new directory called <var>frontend</var> and install all the ember framework within it.</p>
     <p>The code above will get the <var>Ember CLI</var> to scaffold everything you need to get started.</p>
     <hr/>
     <h3>Launch the app</h3>
     <p>You application is ready and all you need to do is:</p>
-    <blockquote><code>cd frontend</code></blockquote>
+    <blockquote><code class="terminal">cd frontend</code></blockquote>
     <p>and they followed by:</p>
-    <blockquote><code>ember serve</code></blockquote>
+    <blockquote><code class="terminal">ember serve</code></blockquote>
     <p>The project will start building, and once complete you will get a notice on how to view the project in your
       browser:</p>
-    <blockquote><code>Build successful (16487ms) – Serving on http://localhost:4200/</code></blockquote>
+    <blockquote><code class="terminal">Build successful (16487ms) – Serving on http://localhost:4200/</code>
+    </blockquote>
     <p>Go to that url and if you are using the latest Ember, you should see the Ember mascot "Tomster" and
       "Congratulations .." msg. This is embers welcome page. It comes with every Ember new install.</p>
     <p>WOOHOO you got ember up and running.</p>
   </section>
 
+  <section id="3">
+    <h2>3: Cool welcome page, now what</h2>
+    <p>Load up the <var>frontend</var> folder in your favorite IDE, so we can start editing and building our personal
+      portfolio frontend.</p>
+    <p>Lets remove the <var>welcome page</var>, by going to the following file <code>app/template/application.hbs</code>
+      and you will be greeted with he following lines</p>
+    <blockquote>
+      <code>
+        \{{!-- The following component displays Ember's default welcome message. --}}<br/>
+        \{{welcome}}<br/>
+        \{{!-- Feel free to remove this! --}}<br/>
+        \{{outlet}}<br/>
+      </code>
+    </blockquote>
+    <p>The code blocks that are in between the curly braces <var>\{{ some code here }}</var> are handlebar syntax that
+      is used by ember when templating the frontend. Lets see what each block means line by line.</p>
+    <blockquote>
+      <code>
+        \{{!-- The following component displays Ember's default welcome message. --}}
+      </code>
+    </blockquote>
+    <p>Any text that is between <var>\{{!-- text --}}</var> will become a comment. This is handlebars/embers version of
+      doing html comments. This element will be hidden on the frontend, but will be displayed in the actual code</p>
+    <blockquote>
+      <code>
+        \{{welcome}}<br/>
+      </code>
+    </blockquote>
+    <p>This is a component block, its actually calling Embers Welcome Page component template. We will talk more about
+      this in a later lesson.</p>
+    <blockquote>
+      <code>
+        \{{outlet}}<br/>
+      </code>
+    </blockquote>
+    <p>So this is interesting. I will explain it by actually having you work in it</p>
+    <p>Lets listen to what the file tell us and delete all the lines except <var>\{{ outlet }}</var> line. Keep that.
+      Now since your app is still running in the terminal, ember has a live reload running, which will reload the app in
+      the browser everytime it sees a file change.</p>
+    <p>So once you delete the lines and save the file, go over to your browser to <var>localhost:4200</var> and you will
+      see that the page is now empty.</p>
+    <p>Once where there was the welcome text and image, there is now nothing. Dont worry we will start building this
+      out.</p>
+    <hr/>
+  </section>
+  <section id="4">
+    <h2>4: Website Symtantics</h2>
+    <p>Lets break down using proper symantics how a webiste is structured.</p>
+    <p>Im making some assumptions that you have basic understanding of the html building blocks. My goal here is to
+      build this out using proper html syntax, proper css, and only use javascript to add enhancements that cant be done
+      using html/css.</p>
+    <p>Look at the following file <var>app/index.html</var>.</p>
+    <p>This is essentially the html file that gets loaded on every ember page, the onbly thing changins what is between
+      the <var>body</var> tags. There is way more to this, and you will be able to manipulate more, but lets keeps this
+      simple right now. Just know that right now everything I built out will be the html that will go between the <var>body</var>
+      tags.</p>
+    <hr/>
+    <p>So lets plan ahead on how this website will be layed out.</p>
+    <p>We require the following:</p>
+    <ul>
+      <li>Header</li>
+      <li>Content</li>
+      <li>Footer</li>
+    </ul>
+    <p>Yes, its that easy.</p>
+    <hr/>
+    <h4>Header</h4>
+    <p>Lets build out the header. The header will be on every page of our website, it usually is. So we need to make
+      sure that our header shows up on all the pages.</p>
+    <p>We need to think long-term here, build this out in a way that easy to update and manage, because if we just go
+      all in without planning, as this project grows it will be harder to maintain and we will start backtracking to try
+      to correct our mistakes.</p>
+    <p>How we are going to accomplish this is by creating a <var>component</var> called <strong>header</strong>. And
+      this component will only store everything that is the header and menu system. Nothing more, nothing less.</p>
+    <p>You could put everything in a single file, I mean, thats how we used to do it years ago. Remember the days when
+      you used to have a header on each individual html file, and then when one link changed, or a new one needed to get
+      added, you had to go through each and every html file and update it one by one. Gone are those days. I digress,
+      but there is a reason for it, now we can put these elements into there own tiny little component and just call
+      that block once and it will load up on all our pages. So when the day/time comes when we need to update the
+      header, we just need to update a single file and not dozens.</p>
+    <p>We will be using the terminal and the ember-cli to help us create these components. Ember-cli gives us greate
+      commands to help us work faster, by taking a lot of the thought process out of certain actions, like creating
+      components.</p>
+    <p>In your terminal, make sure you are in the <var>frontend</var> directory and type the following:</p>
+    <blockquote>
+      <code class="terminal">
+        ember generate component header
+      </code>
+    </blockquote>
+    <p>and you will get the following output</p>
+    <blockquote>
+      <code>
+        installing component<br>
+        create app/components/header.hbs<br>
+        tip to add a class, run `ember generate component-class header`<br>
+        installing component-test<br>
+        create tests/integration/components/header-test.js
+      </code>
+    </blockquote>
+    <p>To break it apart, ember created for us a file called <var>header.hbs</var> (.hbs being HandleBar Syntax ... I think) and put it in the <var>app/components</var> directory.</p>
+    <p>Then it also created a test file for us, which we can use to create tests. Test Driven Development (TDD).</p>
+    <p>Do you see the following line</p>
+    <blockquote><code>tip to add a class, run `ember generate component-class header`</code></blockquote>
+    <p>What is a component class you ask. Hold that thought we will come back to that.</p>
+    <p>If we go to the recent header.hbs file that was created and open it, it will be blank. So lets built out a basic header.</p>
+    <blockquote>
+      &lt;header&gt; Lets put some header syntax &lt;/header&gt;
+    </blockquote>
+  </section>
+
+
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
 
   <section id="i-need-ember">
     <h2>I need ember</h2>
     <p>So you need Ember, well your in luck, Ember has some great <a
-            href="https://guides.emberjs.com/release/tutorial/part-1/orientation/">documentation</a> on how to install it.
+            href="https://guides.emberjs.com/release/tutorial/part-1/orientation/">documentation</a> on how to install
+      it.
     </p>
-    <p>But your not here to look elsewhere, so im going to walk you through just like how Ember walkes you through it.</p>
+    <p>But your not here to look elsewhere, so im going to walk you through just like how Ember walkes you through
+      it.</p>
     <h4>Prerequisites</h4>
     <p>1 - Node <a href="#install-node">(Help Me Install Node)</a></p>
-    <p>2 - NPM <a href="#install-npm">(Help Me Install Node)</a></p>
+    <p>2 - NPM <a href="#install-npm">(Help Me Install NPM)</a></p>
     <p>3 - Ember</p>
     <hr/>
     <p>To install Ember, we need to make sure you have both <var>Node</var> and <var>NPM</var> is installed on your
       computer. You can quickly check that by typing the following in your terminal:</p>
-    <blockquote><code>node --version</code></blockquote>
-    <blockquote><code>npm --version</code></blockquote>
-    <p>If any of them produce and error see the prerequisites on how to install that specific package on your system.</p>
+    <blockquote><code class="terminal">node --version</code></blockquote>
+    <blockquote><code class="terminal">npm --version</code></blockquote>
+    <p>If any of them produce and error see the prerequisites on how to install that specific package on your
+      system.</p>
     <p>To install the <var>Ember CLI</var> on your computer, type the following command into your terminal:</p>
-    <blockquote><code>npm install -g ember-cli</code></blockquote>
+    <blockquote><code class="terminal">npm install -g ember-cli</code></blockquote>
     <p>This will install the latest version which should be at minimum <var>3.16.0</var>, which is what we are building
       this project in.</p>
     <p>To test to make sure everything went well then type the following in your terminal:</p>
-    <blockquote><code>ember --version</code></blockquote>
+    <blockquote><code class="terminal">ember --version</code></blockquote>
     <p>And you should get the following back (give or take a version digit)</p>
     <blockquote>
-      <code>
+      <code class="terminal">
         ember-cli: 3.16.0<br/>
         node: 12.16.0<br/>
         os: linux x64
@@ -155,7 +283,7 @@
     <p>When installing node, npm will get installed with it as well. However, npm is usually updated far more frequently
       than node, which you can always update using the following command in your terminal:</p>
     <blockquote>
-      <code>
+      <code class="terminal">
         npm install npm@latest -g
       </code>
     </blockquote>
