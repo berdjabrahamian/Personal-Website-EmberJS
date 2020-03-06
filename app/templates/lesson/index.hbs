@@ -22,8 +22,9 @@
       <a href="https://github.com/berdjabrahamian/Personal-Website-EmberJS">Personal Portfolio Repo</a></p>
     <p>If you have any question, comments, suggestion or feedback, please feel free to contact me:<br>
     <ul>
-      <li>Email:</li>
-      <li>Website:</li>
+      <li>Email (gmail): berdj.abrahamian</li>
+      <li>Website: <a href="berdj.dev">berdj.dev</a></li>
+      <li>Github: <a href="https://github.com/berdjabrahamian">Berdj Abrahamian</a></li>
     </ul>
     </p>
   </section>
@@ -43,7 +44,6 @@
 
 
 <article>
-
   <section id="story-1">
     <h2>How will this project come together</h2>
     <p>As I said above, this project will be a learning experience for me and hopefully for you as well. We will be
@@ -215,18 +215,48 @@
         create tests/integration/components/header-test.js
       </code>
     </blockquote>
-    <p>To break it apart, ember created for us a file called <var>header.hbs</var> (.hbs being HandleBar Syntax ... I think) and put it in the <var>app/components</var> directory.</p>
+    <p>To break it apart, ember created for us a file called <var>header.hbs</var> (.hbs being HandleBar Syntax ... I
+      think) and put it in the <var>app/components</var> directory.</p>
     <p>Then it also created a test file for us, which we can use to create tests. Test Driven Development (TDD).</p>
     <p>Do you see the following line</p>
     <blockquote><code>tip to add a class, run `ember generate component-class header`</code></blockquote>
     <p>What is a component class you ask. Hold that thought we will come back to that.</p>
-    <p>If we go to the recent header.hbs file that was created and open it, it will be blank. So lets built out a basic header.</p>
+    <p>If we go to the recent header.hbs file that was created and open it, it will be blank. So lets built out a basic
+      header.</p>
     <blockquote>
-      &lt;header&gt; Lets put some header syntax &lt;/header&gt;
+      <code class="html">
+        &lt;header&gt;
+        <p>This is a header tag</p>
+        &lt;/header&gt;
+      </code>
     </blockquote>
+    <p>Your page should refresh, but there is nothing showing. That is because we are missing a step. What we just
+      created is a component, it doenst get displayed until we actually call it. So go to <var>applicatoin.hbs</var> and
+      have it look like the followingL</p>
+    <blockquote>
+      <code>
+        &lt;Header/&gt;
+        <br/>
+        \{{outlet}}
+      </code>
+    </blockquote>
+    <p>And now you will see the text "This is a header tag" on the page</p>
+
+
   </section>
 
 
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
+  <hr/>
   <hr/>
   <hr/>
   <hr/>

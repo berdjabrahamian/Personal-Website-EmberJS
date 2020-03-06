@@ -19,6 +19,7 @@ blockquote {
 
   code {
     display: block;
+    word-break: break-word;
 
     &.terminal {
       &::before {

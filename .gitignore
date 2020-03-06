@@ -29,3 +29,5 @@
 .firebaserc
 .firebase
 
+/.idea/
+.DS_Store
