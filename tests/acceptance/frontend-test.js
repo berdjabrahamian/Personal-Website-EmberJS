@@ -17,15 +17,15 @@ module('Acceptance | frontend', function (hooks) {
     assert.equal(currentURL(), '/contact');
   });
 
-  test('visiting POSTS PAGE - /posts', async function(assert) {
+  test('visiting POSTS PAGE - /posts', async function (assert) {
     await visit('/posts');
 
     assert.equal(currentURL(), '/posts');
   });
 
-  test('visiting LESSONS PAGE - /lesson', async function(assert) {
-    await visit('/lesson');
+  test('visiting LESSONS PAGE - /lessons', async function (assert) {
+    await visit('/lessons');
 
-    assert.equal(currentURL(), '/lesson');
+    assert.equal(currentURL(), '/lessons');
   });
 });
