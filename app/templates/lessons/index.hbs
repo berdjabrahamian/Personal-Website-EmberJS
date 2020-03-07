@@ -6,19 +6,16 @@
 <artice>
   <section>
     <p>Welcome! This page will be dedicated to the building of my Personal Portfolio Website, utilizing frameworks like
-      Ember.js amongst other things.
-      The goal of this project is to teach myself the Ember framework while leveling up my skills. But there is a beauty
-      to all of this. Since I am documenting everything, this will also be a great tutorial to helping you out as
-      well.</p>
+      Ember.js amongst other things. The goal of this project is to teach myself the Ember framework while leveling up
+      my skills. But there is a beauty to all of this. Since I am documenting everything, this will also be a great
+      tutorial to helping you out as well.</p>
     <p>This project will be built on Ember Octane (v3.16). If you have gotten this far, it means that not only has this
       project succeeded in everything that I had imagined in my own mind, but also that you were able to find it by one
       search query or another.</p>
     <p>This page is supposed to be the <a href="/">Live Demo</a>, where you are allowed to play around. Everything you
-      see
-      on this site will be documented in one form or another on this site.</p>
+      see on this site will be documented in one form or another on this site.</p>
     <p>You can clone the repository that is connected to this app from GitHub and launch it on your desktop anytime,
-      which
-      can be found here:<br>
+      which can be found here:<br>
       <a href="https://github.com/berdjabrahamian/Personal-Website-EmberJS">Personal Portfolio Repo</a></p>
     <p>If you have any question, comments, suggestion or feedback, please feel free to contact me:<br>
     <ul>
@@ -35,10 +32,13 @@
   <section>
     <h2>Contents</h2>
     <h4><a href="#story-1">Story: How will this project come together</a></h4>
-    <h4><a href="#1">Lesson 1: Getting Set up and Started</a></h4>
+    <h4><a href="#1">Lesson 1: Getting set up and started</a></h4>
     <h4><a href="#2">Lesson 2: Lets get the project started</a></h4>
     <h4><a href="#3">Lesson 3: Cool welcome page, now what</a></h4>
     <h4><a href="#4">Lesson 4: Website Symantics</a></h4>
+    <h4><a href="#5">Lesson 5: Lets add some content</a></h4>
+    <h4><a href="#6">Lesson 6: Routes and Templates</a></h4>
+
   </section>
 </aside>
 
@@ -59,32 +59,26 @@
 
   <section id="1">
     <h2>1: Getting Set up and Started</h2>
-    <p>To begin we will need to first set up our directory structure. So lets open up our terminal and get started</p>
+    <p>To begin we will need to first set up our directory structure. So lets open up our terminal and get started.
+      Lets created a new directory that will hold our project, and <var>cd</var> (change directory) into it.</p>
     <blockquote>
       <code class="terminal">mkdir Portfolio</code>
-    </blockquote>
-    <p>Depending on your OS, the terminal will default to a specific location on open - on a mac, its the users home
-      folder. </p>
-    <p>Now that we have the new folder created lets <var>cd</var> (change directory) into our newly created folder.</p>
-    <blockquote>
       <code class="terminal">cd Portfolio</code>
     </blockquote>
-    <p>We are in our Portfolio folder, and we are ready to start building</p>
+    <p>We are now in our Portfolio folder, and we are ready to start building</p>
     <hr/>
     <h3>Installing Ember</h3>
     <p>First lets check to see if you have <var>ember cli</var> installed on your system. You can easily check by typing
       the following in your terminal:</p>
     <blockquote>
       <code class="terminal">ember --version</code>
-    </blockquote>
-
-    <blockquote>
       <code class="terminal">
         ember-cli: 3.16.0<br/>
         node: 12.14.0<br/>
         os: darwin x64
       </code>
     </blockquote>
+
     <p>If you get something along the lines of the following, then it means you have ember on your computer, if you get
       something different (ie. a error) then we need to install <var>Ember CLI</var>.
     </p>
@@ -96,17 +90,20 @@
 
   <section id="2">
     <h2>2: Lets get the project started</h2>
-    <p>Your terminal should still be reading within the <var>Portfolio</var> folder you created in the first lesson.</p>
+    <p>Your terminal should still be reading within the <var>Portfolio</var> folder you created above.</p>
     <p>To get the Ember project started and going, you just need to type the following in the terminal:</p>
     <blockquote><code class="terminal">ember new frontend</code></blockquote>
     <p>This will create a new directory called <var>frontend</var> and install all the ember framework within it.</p>
     <p>The code above will get the <var>Ember CLI</var> to scaffold everything you need to get started.</p>
+    <p>The reason we are scaffolding an ember app into another folder rather than the one we are in is because we plan
+      on creating other services that will be used as well. So we are separating it.</p>
     <hr/>
     <h3>Launch the app</h3>
     <p>You application is ready and all you need to do is:</p>
-    <blockquote><code class="terminal">cd frontend</code></blockquote>
-    <p>and they followed by:</p>
-    <blockquote><code class="terminal">ember serve</code></blockquote>
+    <blockquote>
+      <code class="terminal">cd frontend</code>
+      <code class="terminal">ember serve</code>
+    </blockquote>
     <p>The project will start building, and once complete you will get a notice on how to view the project in your
       browser:</p>
     <blockquote><code class="terminal">Build successful (16487ms) – Serving on http://localhost:4200/</code>
@@ -114,6 +111,12 @@
     <p>Go to that url and if you are using the latest Ember, you should see the Ember mascot "Tomster" and
       "Congratulations .." msg. This is embers welcome page. It comes with every Ember new install.</p>
     <p>WOOHOO you got ember up and running.</p>
+    <i>FYI. You can always scaffold a new ember project without the Welcome Page by using the following command:</i>
+    <blockquote>
+      <code class="terminal">
+        ember new *project_name* --no-welcome
+      </code>
+    </blockquote>
   </section>
 
   <section id="3">
@@ -241,30 +244,116 @@
       </code>
     </blockquote>
     <p>And now you will see the text "This is a header tag" on the page</p>
+    <p>That is cool, what the <var>&lt;Header/&gt;</var> is doing is its calling your HEADER component, which has the
+      <var>&lt;header&gt;</var> tags in there. But this is not how a header is supposed to look like. Lets go back to
+      our header component and make this actually nicer.</p>
 
+    <blockquote>
+      <code>
+        &lt;header&gt;<br/>
+        &lt;nav&gt;<br/>
+        &lt;menu&gt;<br/>
+        &lt;li&gt; Home &lt;/li&gt;<br/>
+        &lt;li&gt; Contact &lt;/li&gt;<br/>
+        &lt;li&gt; About &lt;/li&gt;<br/>
+        &lt;/menu&gt;<br/>
+        &lt;/nav&gt;<br/>
+        &lt;/header&gt;
+      </code>
+    </blockquote>
+    <p>Once you save, and the browser refreshes your going to see a the list of text we just created on the page. (This
+      isnt clickable just yet, we will get to that very soon.</p>
+    <p>I understand it looks slightly plain, and still hard to tell apart, so what we should do next before we continue
+      is to set up some simple styling so we can tell the different elements apart.</p>
+    <hr/>
+    <p>Lets do some very simple styling so that we can tell apart what is the <var>header</var>, <var>content</var>, and
+      <var>footer</var> on our page since we have started putting in some markup.</p>
+    <p>Put the following stylesheet in that file and save:</p>
+    <blockquote><code>
+      header { background:lightblue;}<br/>
+      main {background:lightgrey;}<br/>
+      footer {background:lightgreen;}
+    </code></blockquote>
+    <p>Now you should see the page refresh and the Header block have a blue background.</p>
+    <hr/>
+    <p>Now that we got the hang of the header, lets go and use the steps we learned earlier to create a footer
+      component. The steps is still the same, however we are just replacing the work <var>header</var> with
+      <var>footer</var>.</p>
+    <p>On a quick level here is how its all supposed to go down.</p>
+    <p><var>terminal</var></p>
+    <blockquote>
+      <code class="terminal">
+        ember generate component footer
+      </code>
+      <code>
+        installing component<br>
+        create app/components/footer.hbs<br>
+        tip to add a class, run `ember generate component-class footer`<br>
+        installing component-test<br>
+        create tests/integration/components/footer-test.js
+      </code>
+    </blockquote>
 
+    <p><var>application.hbs</var></p>
+    <blockquote>
+      <code>
+        &lt;Header/&gt;
+        <br/>
+        \{{outlet}}
+        <br/>
+        &lt;Footer/&gt;
+      </code>
+    </blockquote>
+
+    <p><var>components/footer.hbs</var></p>
+    <blockquote>
+      <code>
+        &lt;footer&gt;<br/>
+        This is my footer block
+        &lt;/footerr&gt;
+      </code>
+    </blockquote>
+    <p>And ther you go, your header will have a lightblue background, then you will have right below it your footer with
+      a lightgreen background.</p>
+    <p>There is still nothing in the middle, because we havent put anything there, which is what our next lesson is
+      going to be about.</p>
+  </section>
+
+  <section id="5">
+    <h2>5: Lets add some content</h2>
+    <p>Application.hbs is the main template where everything gets rendered from. All routes render out from <var>application.hbs</var>
+      template. The way that is done is through the <var>\{{outlet}}</var> syntax.</p>
+    <p>Lets break down how it works - using the
+      <LinkTo @route="lessons">Lessons</LinkTo>
+      route.
+    </p>
+    <ul>
+      <li>You go to <var>localhost:4200/lessons</var></li>
+      <li>Ember grabs the lessons.hbs template file, and loads all its content through the <var>application.hbs > \
+        {{outlet}}</var> component.
+      </li>
+    </ul>
+    <p>If you were to remove this block. Then the lessons template will not load and the screen will only contain the
+      header and the footer blocks we created earlier.</p>
+    <p>So how do we build out our pages and templates when we have main routes, like lessons and posts, but also have
+      child routes like a single lesson/post page.</p>
+    <p>You know what that means, we finally start creating routes, templates, and content.</p>
+    <p>Lets break down how we are going to approach this. Here is what we need:</p>
+    <ul>
+      <li>Home Page - this is the main homepage -> we will call this <var>Index</var></li>
+     <li>Contact Page - this will have our contact information -> we will call this <var>contact</var></li>
+      <li>Projects Page - this will hold all our projects -> we will call this <var>Projects</var></li>
+      <li>Project Page -> this will display a single project details -> we will call this <var>Project</var></li>
+    </ul>
+    <p>As we walk through these pages building out the routes and templates, you will get a deeper understanding of how the \{{outlet}} block works between parent and child templates. So lets get started.</p>
+  </section>
+  <section id="6">
+    <h2>Routes and Templates</h2>
   </section>
 
 
   <hr/>
   <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-  <hr/>
-
   <section id="i-need-ember">
     <h2>I need ember</h2>
     <p>So you need Ember, well your in luck, Ember has some great <a
