@@ -1,0 +1,10 @@
+{{#each @model as |project|}}
+  <article>
+    <hgroup>
+      <h2>{{project.name}}</h2>
+      <h5>{{project.id}}</h5>
+    </hgroup>
+    <p>{{project.description}}</p>
+    <a href={{project.html_url}}>View Project on Github</a>
+  </article>
+{{/each}}

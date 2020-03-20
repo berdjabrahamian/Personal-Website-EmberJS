@@ -14,6 +14,8 @@ Router.map(function() {
     this.route('index', {path: '/'});
   });
   this.route('lessons', function() {
+
+  this.route('projects', function() {
     this.route('index', {path: '/'});
   });
 });
