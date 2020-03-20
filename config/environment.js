@@ -58,6 +58,8 @@ module.exports = function (environment) {
   ENV.USERNAME = process.env.GITHUB_USERNAME;
   //Email Address
   ENV.EMAIL = process.env.EMAIL;
+  //Phone Number
+  ENV.PHONE_NUMBER = process.env.PHONE_NUMBER;
 
 
   return ENV;
