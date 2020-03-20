@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'personal-portfolio',
     environment,
@@ -29,6 +29,11 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['ember-cli-mirage'] = {
+      enabled: false,
+      autostart: false
+    };
   }
 
   if (environment === 'test') {
@@ -47,13 +52,13 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
-  ENV.GITHUB = 'https://github.com';
-  ENV.EMAIL = 'my.email@example.com';
+  //Github URL
+  ENV.GITHUB = process.env.GITHUB;
+  //Github Username
+  ENV.USERNAME = process.env.GITHUB_USERNAME;
+  //Email Address
+  ENV.EMAIL = process.env.EMAIL;
 
-  ENV['ember-cli-mirage'] = {
-    enabled: true,
-    autostart: true
-  };
 
   return ENV;
 };
