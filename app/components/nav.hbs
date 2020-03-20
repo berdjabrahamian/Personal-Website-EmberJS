@@ -1,0 +1,27 @@
+<nav>
+  <menu>
+    <figure>
+      <LinkTo @route="index">
+        <img src="/assets/images/ba-logo.png" alt="Berdj Abrahamian Personal Portfolio" class="logo" id="logo">
+      </LinkTo>
+    </figure>
+    <li>
+      <LinkTo @route="index">Home</LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="projects">Projects</LinkTo>
+    </li>
+    {{!--
+    <li>
+      <LinkTo @route="contact">Contact</LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="posts">Posts</LinkTo>
+    </li>
+    --}}
+    <li>
+      <LinkTo @route="lessons">Lessons</LinkTo>
+    </li>
+  </menu>
+</nav>
+{{yield}}

@@ -11,6 +11,11 @@ main {
   align-content: flex-start;
   justify-content: flex-start;
   max-width: 75rem;
+
+  article {
+    flex: 1 0 100%;
+    margin:20px 0;
+  }
 }
 
 section {

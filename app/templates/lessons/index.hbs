@@ -28,19 +28,8 @@
 </artice>
 
 
-<aside>
-  <section>
-    <h2>Contents</h2>
-    <h4><a href="#story-1">Story: How will this project come together</a></h4>
-    <h4><a href="#1">Lesson 1: Getting set up and started</a></h4>
-    <h4><a href="#2">Lesson 2: Lets get the project started</a></h4>
-    <h4><a href="#3">Lesson 3: Cool welcome page, now what</a></h4>
-    <h4><a href="#4">Lesson 4: Website Symantics</a></h4>
-    <h4><a href="#5">Lesson 5: Lets add some content</a></h4>
-    <h4><a href="#6">Lesson 6: Routes and Templates</a></h4>
+<Lessons::Nav></Lessons::Nav>
 
-  </section>
-</aside>
 
 
 <article>
@@ -341,14 +330,31 @@
     <p>Lets break down how we are going to approach this. Here is what we need:</p>
     <ul>
       <li>Home Page - this is the main homepage -> we will call this <var>Index</var></li>
-     <li>Contact Page - this will have our contact information -> we will call this <var>contact</var></li>
+      <li>Contact Page - this will have our contact information -> we will call this <var>contact</var></li>
       <li>Projects Page - this will hold all our projects -> we will call this <var>Projects</var></li>
       <li>Project Page -> this will display a single project details -> we will call this <var>Project</var></li>
     </ul>
-    <p>As we walk through these pages building out the routes and templates, you will get a deeper understanding of how the \{{outlet}} block works between parent and child templates. So lets get started.</p>
+    <p>As we walk through these pages building out the routes and templates, you will get a deeper understanding of how
+      the \{{outlet}} block works between parent and child templates. So lets get started.</p>
   </section>
   <section id="6">
     <h2>Routes and Templates</h2>
+    <blockquote>
+      <code class="terminal">
+        ember generate route projects
+      </code>
+    </blockquote>
+    <blockquote>
+      <code>
+        installing route<br/>
+        create app/routes/projects.js<br/>
+        create app/templates/projects.hbs<br/>
+        updating router<br/>
+        add route projects<br/>
+        installing route-test<br/>
+        create tests/unit/routes/projects-test.js
+      </code>
+    </blockquote>
   </section>
 
 
