@@ -1,6 +1,6 @@
 import Model, {attr} from '@ember-data/model';
 
-export default class ProjectModel extends Model {
+export default class ProjectsModel extends Model {
   @attr name;
   @attr full_name;
   @attr('boolean') private;
