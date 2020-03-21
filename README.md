@@ -15,6 +15,8 @@ The main page to view all the lessons is [here](https://ba-personal.firebaseapp.
 - [Lesson 4: Website Symantics](https://ba-personal.firebaseapp.com/lessons#4)
 - [Lesson 5: Lets add some content](https://ba-personal.firebaseapp.com/lessons#5)
 - [Lesson 6: Routes and Template] (Coming Soon)
+- [Lesson 7: Projects] (Coming Soon)
+
 - [I Need Ember](https://ba-personal.firebaseapp.com/lessons#i-need-ember)
 - [Install Node](https://ba-personal.firebaseapp.com/lessons#install-node)
 - [Install NPM](https://ba-personal.firebaseapp.com/lessons#i-need-npm)

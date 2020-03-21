@@ -17,7 +17,9 @@ Router.map(function () {
     this.route('index', {path: '/'});
   });
 
-  this.route('projects', function() {
+  this.route('projects', function () {
     this.route('index', {path: '/'});
+    this.route('show', {path: '/:projects_id'});
   });
+
 });

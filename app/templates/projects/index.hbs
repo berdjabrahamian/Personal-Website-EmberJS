@@ -1,10 +1,14 @@
 {{#each @model as |project|}}
   <article>
     <hgroup>
-      <h2>{{project.name}}</h2>
+      <h2>{{project.name}}   {{#if project.fork}}(<span>Fork</span>){{/if}}</h2>
       <h5>{{project.id}}</h5>
     </hgroup>
+
     <p>{{project.description}}</p>
+
+    <LinkTo @route="projects" @model={{project}}>Project Link</LinkTo>
+    <br>
     <a href={{project.html_url}}>View Project on Github</a>
   </article>
 {{/each}}

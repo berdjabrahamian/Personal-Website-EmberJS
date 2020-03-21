@@ -1,7 +1,8 @@
-import ApplicationAdapter from './application';
+import ApplicationAdapter from '../application';
 import ENV from 'personal-portfolio/config/environment';
 
-export default class ProjectsAdapter extends ApplicationAdapter {
+
+export default class ProjectsIndexAdapter extends ApplicationAdapter {
 
   host = 'https://api.github.com';
 
@@ -9,5 +10,4 @@ export default class ProjectsAdapter extends ApplicationAdapter {
     let baseUrl = this.host + `/users/${ENV.USERNAME}/repos`;
     return baseUrl;
   }
-
 }
