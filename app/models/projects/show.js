@@ -10,5 +10,6 @@ export default class ProjectsShowModel extends Model {
   @attr html_url;
   @attr status;
   @attr description;
-  @attr fork;
+  @attr ('boolean') fork;
+
 }

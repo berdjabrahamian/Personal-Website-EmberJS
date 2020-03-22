@@ -1,1 +1,13 @@
-<h1>Projects Show</h1>
+<article>
+  <h1>{{model.name}}</h1>
+  <h5>id:{{model.id}}</h5>
+  {{#if model.fork}}
+    <h6>This is a fork</h6>
+  {{/if}}
+  <section>
+    <p>{{model.description}}</p>
+    {{#each-in model.owner as |key value|}}
+      <p>{{key}}: {{value}}</p>
+    {{/each-in}}
+  </section>
+</article>

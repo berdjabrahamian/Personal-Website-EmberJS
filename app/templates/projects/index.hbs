@@ -7,7 +7,7 @@
 
     <p>{{project.description}}</p>
 
-    <LinkTo @route="projects" @model={{project}}>Project Link</LinkTo>
+    <LinkTo @route="projects.show" @model={{project.name}}>Project Link</LinkTo>
     <br>
     <a href={{project.html_url}}>View Project on Github</a>
   </article>
