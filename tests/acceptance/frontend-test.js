@@ -20,12 +20,18 @@ module('Acceptance | frontend', function (hooks) {
   test('visiting POSTS PAGE - /posts', async function (assert) {
     await visit('/posts');
 
-    assert.equal(currentURL(), '/posts');
+    assert.equal(currentURL(), '/');
   });
 
   test('visiting LESSONS PAGE - /lessons', async function (assert) {
     await visit('/lessons');
 
     assert.equal(currentURL(), '/lessons');
+  });
+
+  test('visiting PROJECTS PAGE - /projects', async function(assert){
+    await visit('/projects');
+
+    assert.equal(currentURL(), '/projects');
   });
 });
