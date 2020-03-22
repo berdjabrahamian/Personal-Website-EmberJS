@@ -5,9 +5,10 @@
     <h6>This is a fork</h6>
   {{/if}}
   <section>
-    <p>{{model.description}}</p>
-    {{#each-in model.owner as |key value|}}
-      <p>{{key}}: {{value}}</p>
-    {{/each-in}}
+    <p>Description: {{model.description}}</p>
+    <p>Created At: {{model.created_at}}</p>
+    <p>Last Updated: {{model.updated_at}}</p>
+    <p>Clone: {{model.clone_url}}</p>
+    <p>Language: {{model.language}}</p>
   </section>
 </article>
