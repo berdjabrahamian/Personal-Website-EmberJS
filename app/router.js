@@ -22,4 +22,5 @@ Router.map(function () {
     this.route('show', {path: '/show/:project_name'});
   });
 
+  this.route('resume');
 });
