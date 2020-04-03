@@ -1,4 +1,4 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, hasMany } from '@ember-data/model';
 
 export default class ProjectsShowModel extends Model {
   @attr name;
@@ -15,4 +15,6 @@ export default class ProjectsShowModel extends Model {
   @attr ssh_url;
   @attr clone_url;
   @attr ('string') language;
+
+  @hasMany('projects.commits') commits;
 }

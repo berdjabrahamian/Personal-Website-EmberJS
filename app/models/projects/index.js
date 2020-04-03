@@ -10,5 +10,12 @@ export default class ProjectsIndexModel extends Model {
   @attr html_url;
   @attr status;
   @attr description;
-  @attr fork;
+  @attr ('boolean') fork;
+  @attr status;
+  @attr ('date') created_at;
+  @attr ('date') updated_at;
+  @attr ('date') pushed_at;
+  @attr ssh_url;
+  @attr clone_url;
+  @attr ('string') language;
 }
