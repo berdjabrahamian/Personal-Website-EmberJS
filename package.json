@@ -61,6 +61,6 @@
     "edition": "octane"
   },
   "dependencies": {
-    "highlight.js": "^9.18.1"
+    "highlight.js": "^10.4.1"
   }
 }
